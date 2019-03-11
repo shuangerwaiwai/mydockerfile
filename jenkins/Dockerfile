@@ -4,6 +4,7 @@ COPY ./settings.xml /etc/
 RUN apt-get update \
     && apt-get install -y python-pip \
     && pip install paramiko PyYAML Jinja2 httplib2 six \
+    && pip install requests \
     && pip install ansible \
     && apt-get install -y maven \
     && mv /etc/settings.xml /etc/maven/ \
